@@ -12,7 +12,7 @@ app.post("/api/auth/login", (req, res) => {
   console.log(email);
 
   res.cookie("X-AUTH-TOKEN", "hellosfjsfsiff", {
-    sameSite: "none",
+    sameSite: "lax",
     path: "/",
     httpOnly: true,
     maxAge: 60 * 60 * 24 * 7,
