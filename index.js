@@ -12,11 +12,9 @@ app.post("/api/auth/login", (req, res) => {
   console.log(email);
 
   res.cookie("X-AUTH-TOKEN", "hellosfjsfsiff", {
-    sameSite: "lax",
-    path: "/",
-    httpOnly: true,
+    sameSite: "none",
+    path: "/*",
     maxAge: 60 * 60 * 24 * 7,
-    secure: true,
   });
 
   return res.send("success");
