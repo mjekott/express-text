@@ -15,7 +15,7 @@ app.post("/api/auth/login", (req, res) => {
     sameSite: "none",
     path: "/*",
     maxAge: 60 * 60 * 24 * 7,
-    secure:true
+    secure:false
   });
 
   return res.send("success");
